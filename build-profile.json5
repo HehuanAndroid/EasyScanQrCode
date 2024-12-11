@@ -36,6 +36,10 @@
           ]
         }
       ]
+    },
+    {
+      "name": "harmony_utils",
+      "srcPath": "./harmony_utils"
     }
   ]
 }
