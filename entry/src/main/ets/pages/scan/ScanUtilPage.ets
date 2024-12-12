@@ -67,6 +67,7 @@ struct Index {
                 ToastUtil.showToast("当前设备不支持码能力！")
               }
             })
+
           Image(this.pixelMap)
             .visibility(this.pixelMap ? Visibility.Visible : Visibility.None)
             .textStyle()
