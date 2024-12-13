@@ -9,7 +9,7 @@ import { MockSetup } from '@ohos/hamock';
  */
 @Entry
 @Component
-struct Index {
+export struct ScanUtilPage {
   private scroller: Scroller = new Scroller();
   @State describe: DescribeBean = router.getParams() as DescribeBean;
   private txtStr: string = "harmony-utils 一款高效的OpenHarmony/HarmonyOS工具包，封装了常用工具类，提供一系列简单易用的方法";
@@ -36,11 +36,11 @@ struct Index {
 
   build() {
     Column() {
-      ComposeTitleBar({
-        title: this.describe.name,
-        subtitle: this.describe.desc,
-      })
-      Divider()
+      // ComposeTitleBar({
+      //   title: this.describe.name,
+      //   subtitle: this.describe.desc,
+      // })
+      // Divider()
       Scroll(this.scroller) {
         Column() {
           Button("startScanForResult()")

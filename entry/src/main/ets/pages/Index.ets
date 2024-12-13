@@ -1,31 +1,12 @@
 import EasyToolbar from '../component/EasyToolbar';
 import WindowManager from '../utils/WindowManager';
-import { image } from '@kit.ImageKit';
-import { FileUtil, ScanUtil, ToastUtil } from '@pura/harmony-utils';
+// 导入图片识码需要的日志和picker模块
 
 @Entry
 @Component
 struct Index {
-  private readonly fileName: string = "qr_code.png";
-  @State filePath: string = '';
-  @State pixelMap?: image.PixelMap = undefined;
-  @State scanStr1: string = '';
-  @State scanStr2: string = '';
-  @State scanStr3: string = '';
-
-  aboutToAppear(): void {
-    this.filePath = FileUtil.getFilesDirPath("",this.fileName)
-    if (!ScanUtil.canIUseScan()) {
-      ToastUtil.showToast("当前设备不支持码能力！")
-    }
-  }
-
-
-
-
 
   private clickPicture() {
-
   }
 
   private clickHistory() {
@@ -48,8 +29,6 @@ struct Index {
           this.clickMore()
         }
       })
-
-
     }
     .width("100%")
     .height("100%")
