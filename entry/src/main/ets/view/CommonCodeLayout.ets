@@ -32,7 +32,8 @@ export struct CodeLayout {
     code: 0,
     data: [],
     size: 0,
-    uri: ''
+    uri: '',
+    timestamp: 0
   }
   @Prop foldStatus: number = -1;
   @State multiCodeScanLocation: Array<Array<number>> = []; // Display positions of multiple barcodes.

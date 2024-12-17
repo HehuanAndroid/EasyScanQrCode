@@ -9,7 +9,9 @@
     //本地引用
     //    "@pura/harmony-dialog": "file:../harmony_dialog",
 //    "@pura/harmony-utils": "file:./libs/harmony_utils.har",
-    "@pura/harmony-utils": "file:../harmony_utils"
+    "@pura/harmony-utils": "file:../harmony_utils",
+    //远程库
+//    "@ohos/lottie": "^2.0.0"
   }
 }
 
