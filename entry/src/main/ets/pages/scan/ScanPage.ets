@@ -24,6 +24,8 @@ import { PermissionUtils } from '../../utils/PermissionUtils';
 import { CustomButton } from '../../common/CommonComponents';
 import { KvUtil } from '@pura/harmony-utils';
 import { ScanResultsUtils } from '../../utils/ScanResultsUtils';
+import EasyToolbar from '../../component/EasyToolbar';
+import WindowManager from '../../utils/WindowManager';
 
 export const TAG = 'ScanPage';
 
@@ -295,11 +297,39 @@ struct ScanPage {
     }
   }
 
+  private clickPicture() {
+  }
+
+  private clickHistory() {
+
+  }
+
+  private clickMore() {
+
+  }
+  @Builder
+  ToolbarBuilder(){
+    EasyToolbar({
+      clickPicture: (): void => {
+        this.clickPicture()
+      },
+      clickHistory: (): void => {
+        this.clickHistory()
+      },
+      clickMore: (): void => {
+        this.clickMore()
+      }
+    })
+  }
+
+
+
   build() {
     Stack({ alignContent: Alignment.TopStart }) {
       if (this.userGrant) {
         this.BackgroundBuilder()
       }
+      this.ToolbarBuilder()
 
       this.ScanTitleBuilder()
 
@@ -328,6 +358,7 @@ struct ScanPage {
     .width('100%')
     .height('100%')
     .backgroundColor(this.userGrant ? Color.Transparent : Color.Black)
+    .padding({ bottom: WindowManager.navBarHeight })
   }
 
   onScreenEvent(): void {

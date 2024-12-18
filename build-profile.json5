@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/hehuan/.ohos/config/default_EasyScanQrCode_GVJ1ZmzVgoJXO4UMewl3Rh54vqagaQVzqkvOcB3sViI=.cer",
+          "storePassword": "0000001B5B9AE2E873FFA9C62D641D95182FDF6C2FE1F5ED8214BFD720C8E6D179B23BEEB10647ECC50884",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BF87295EECE4494155167BB23A3167FBF8851AC3BC1DCDA9C2A2BE3DE8DE39CF50F3273500AE0FD",
+          "profile": "/Users/hehuan/.ohos/config/default_EasyScanQrCode_GVJ1ZmzVgoJXO4UMewl3Rh54vqagaQVzqkvOcB3sViI=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/hehuan/.ohos/config/default_EasyScanQrCode_GVJ1ZmzVgoJXO4UMewl3Rh54vqagaQVzqkvOcB3sViI=.p12"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",

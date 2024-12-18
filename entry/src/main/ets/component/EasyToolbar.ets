@@ -24,42 +24,39 @@ export default struct EasyToolbar {
 
   build() {
     Column() {
-      Row() {
+      Row({space:20}) {
         Text(this.title)
           .fontColor(Color.Black)
           .fontSize(19)
           .fontWeight(500)
           .margin({ left: 20 })
 
-        Text() {
-          SymbolSpan(this.pictureIconSrc)
-            .width(22)
-            .height(22)
-            .fontWeight(FontWeight.Normal)
-            .fontSize(96)
-        }.onClick(() => {
-          this.clickPicture
-        })
+        Row({space:10}){
+          Text() {
+            SymbolSpan(this.pictureIconSrc)
+              .fontSize(30)
+              .fontWeight(FontWeight.Normal)
+          }.onClick(() => {
+            this.clickPicture
+          })
 
-        Text() {
-          SymbolSpan(this.historyIconSrc)
-            .width(22)
-            .height(22)
-            .fontWeight(FontWeight.Normal)
-            .fontSize(96)
-        }.onClick(() => {
-          this.clickHistory
-        })
+          Text() {
+            SymbolSpan(this.historyIconSrc)
+              .fontSize(30)
+              .fontWeight(FontWeight.Normal)
+          }.onClick(() => {
+            this.clickHistory
+          })
 
-        Text() {
-          SymbolSpan(this.moreIconSrc)
-            .width(22)
-            .height(22)
-            .fontWeight(FontWeight.Normal)
-            .fontSize(96)
-        }.onClick(() => {
-          this.clickMore
-        })
+          Text() {
+            SymbolSpan(this.moreIconSrc)
+              .fontSize(30)
+              .fontWeight(FontWeight.Normal)
+          }.onClick(() => {
+            this.clickMore
+          })
+        }
+        .margin({right:20})
       }
       .height(53)
       .width("100%")
